@@ -2,3 +2,11 @@
 
 Chrome extension to add dark mode to a site that doesn't have it with a single
 click.
+
+Example:
+
+![](./pre.png)
+
+Turns into
+
+![](./post.png)
