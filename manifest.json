@@ -1,0 +1,10 @@
+{
+    "name": "Quick Dark Mode",
+    "description": "Quickly add a dark mode to a site that doesnt have it",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["scripting", "activeTab"],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
