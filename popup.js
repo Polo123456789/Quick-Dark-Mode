@@ -5,6 +5,7 @@ const addDarkMode = () => {
     style.innerHTML = `
         html {
             filter: invert(1) hue-rotate(180deg);
+            background: white;
         }
         html img {
             filter: invert(1) hue-rotate(180deg);
