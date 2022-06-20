@@ -12,6 +12,14 @@ const addDarkMode = () => {
     document.head.appendChild(style);
 }
 
+const toggleDesingMode = () => {
+    if (document.designMode === "on") {
+        document.designMode = "off";
+    } else {
+        document.designMode = "on";
+    }
+}
+
 chrome.commands.onCommand.addListener(async (command) => {
     if (command == "darkmode") {
         console.log(command);
@@ -25,6 +33,20 @@ chrome.commands.onCommand.addListener(async (command) => {
                 tabId: tab.id
             },
             function: addDarkMode
+        });
+    }
+    if (command == "desingmode") {
+        console.log(command);
+        const [tab] = await chrome.tabs.query({
+            active: true,
+            currentWindow: true,
+        });
+
+        chrome.scripting.executeScript({
+            target: {
+                tabId: tab.id
+            },
+            function: toggleDesingMode
         });
     }
 });

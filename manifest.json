@@ -19,6 +19,12 @@
                 "default": "Shift+Alt+D"
             },
             "description": "Add darkmode"
+        },
+        "desingmode": {
+            "suggested_key": {
+                "default": "Shift+Alt+E"
+            },
+            "description": "Toggle desing mode"
         }
     }
 }
